@@ -26,7 +26,7 @@
       <option disabled selected>Loading your rides...</option>
     </select>
   </div>
-  <div id="map"></div>
+  <div id="windy"></div>
 
   <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
   <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
@@ -60,7 +60,7 @@
       level: 'surface',
       timestamp: Date.now()
     }, windyAPI => {
-      const { map } = windyAPI;
+      const { map } = windyAPI.map;
       mapRef = map;
 
       // Load rides from Strava
